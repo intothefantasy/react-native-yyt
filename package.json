@@ -1,0 +1,41 @@
+{
+  "name": "yuyutei",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "rc-start": "npm start -- --reset-cache",
+    "clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clean",
+    "clean-start": "npm run clean && npm run rc-start",
+    "fresh-install": "rm -rf $TMPDIR/react-* && watchman watch-del-all && rm -rf ios/build/ModuleCache/* && rm -rf node_modules/ && npm cache clean && npm install",
+    "fresh-start": "npm run fresh-install && npm run rc-start",
+    "tron": "node_modules/.bin/reactotron"
+  },
+  "dependencies": {
+    "babel-loader": "^7.1.5",
+    "babel-preset-react": "^6.24.1",
+    "dot-prop-immutable": "^1.4.0",
+    "native-base": "^2.7.2",
+    "react": "16.3.1",
+    "react-native": "0.55.4",
+    "react-native-immutable-list-view": "^0.7.3",
+    "react-native-modal-dropdown": "^0.6.2",
+    "react-native-push-notification": "^3.1.1",
+    "react-native-sectioned-multi-select": "^0.5.2",
+    "react-native-tooltip": "^5.2.0",
+    "react-native-vector-icons": "^5.0.0",
+    "react-navigation": "^2.11.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-jest": "23.2.0",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "23.2.0",
+    "react-test-renderer": "16.3.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
